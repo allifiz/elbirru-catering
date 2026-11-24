@@ -1,0 +1,245 @@
+/* Preview 3: Botanical Royal Editorial. All overrides scoped to this branch. */
+.royal-site {
+  --royal-navy: #081c3b;
+  --royal-blue: #103e78;
+  --royal-gold: #a67319;
+  --royal-paper: #faf2e4;
+  --royal-serif: 'Playfair Display', Georgia, serif;
+  --royal-border: #dfc99e;
+  color: var(--royal-navy);
+  background: var(--royal-paper);
+}
+.royal-site header, .royal-home, .royal-site footer, .royal-site .ed-inner {
+  background:
+    url('/images/preview-3/textures/luxury-paper.svg'),
+    radial-gradient(ellipse at 48% 10%, #fffaf1, transparent 75%),
+    linear-gradient(115deg, #f6ead5, #fcf6ea 50%, #f5e7d0);
+}
+.royal-site header {
+  border: 0;
+  box-shadow: 0 2px 8px #63482314;
+}
+.royal-site header::before {
+  content: '';
+  position: absolute;
+  top: -53px;
+  left: -56px;
+  width: 165px;
+  height: 178px;
+  background: url('/images/preview-3/ornaments/botanical-mixed.svg') center / contain no-repeat;
+  transform: rotate(180deg);
+  pointer-events: none;
+  opacity: .8;
+}
+.royal-site .nav {
+  width: min(1540px, 86.5%);
+  height: clamp(72px, 7vw, 95px);
+  gap: clamp(15px, 2.5vw, 38px);
+}
+.royal-site header .brand img { max-width: 145px; filter: none; }
+.royal-site nav { padding-left: 0; }
+.royal-site nav::before { display: none; }
+.royal-site nav a { color: #081c3b; font-weight: 600; }
+.royal-site nav a.current { color: #081c3b; }
+.royal-site nav a.current::after { height: 2px; background: #b17b20; }
+.royal-site .nav-cta, .royal-button {
+  border: 1px solid #d5ac59;
+  border-radius: 28px;
+  color: #fff9ef;
+  background: linear-gradient(180deg, #245585, #081c3b 74%);
+  box-shadow: inset 0 1px 0 #7498b680, 0 3px 7px #13274235;
+  font-size: 13px;
+  font-weight: 700;
+}
+.royal-site .mobile-toggle { color: #081c3b; }
+.royal-site .preview-bar {
+  background: #eee1ca;
+  color: #6a532d;
+}
+.royal-home { overflow: hidden; isolation: isolate; }
+.royal-wrap { width: min(1530px, 87%); margin-inline: auto; }
+.royal-home h1, .royal-home h2 {
+  font-family: var(--royal-serif);
+  font-weight: 600;
+  letter-spacing: -.035em;
+  line-height: 1.13;
+}
+.royal-home h2 { font-size: clamp(26px, 2.6vw, 43px); }
+.royal-home h1 em, .royal-home h2 em { color: #9b671a; font-weight: 600; font-style: italic; }
+.royal-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  color: #081c3b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .24em;
+}
+.royal-kicker::after { content: ''; width: 52px; height: 1px; background: #b18138; }
+.royal-hero { position: relative; min-height: 0; isolation: isolate; }
+.royal-hero-photo { position: absolute; inset: 0 0 32px 32%; overflow: hidden; border-top-left-radius: 42% 20%; z-index: -2; }
+.royal-hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 55% 52%; filter: saturate(1.05) contrast(1.035); }
+.royal-hero-fade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #faf2e4 0%, #faf2e4 26%, #faf2e4ef 34%, #faf2e4ac 42%, #faf2e420 54%, transparent 66%); }
+.royal-hero-content { position: relative; padding: clamp(34px, 3.1vw, 56px) 0 clamp(84px, 8vw, 130px); z-index: 2; }
+.royal-hero h1 { font-size: clamp(38px, 4vw, 66px); max-width: 650px; margin: 9px 0 7px; }
+.royal-hero h1 > span { display: flex; gap: 15px; align-items: center; }
+.royal-hero h1 small {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid #b6863c; border-radius: 30px; padding: 4px 12px;
+  font: 600 12px/1.4 var(--sans); letter-spacing: 0; white-space: nowrap;
+  background: #fff7eacc;
+}
+.royal-hero h1 small svg { color: #9b671a; }
+.royal-hero-content > p { max-width: 490px; font-size: clamp(14px, 1.1vw, 18px); line-height: 1.5; }
+.royal-qualities { display: flex; gap: 10px; align-items: center; margin: 17px 0 20px; }
+.royal-qualities > div { display: flex; align-items: center; gap: 7px; padding-right: 13px; border-right: 1px solid #bd985e; }
+.royal-qualities > div:last-child { border: 0; }
+.royal-qualities > div > span { display: grid; place-items: center; width: 36px; height: 36px; flex-shrink: 0; border-radius: 50%; border: 1px solid #b4863c; color: #9c6b24; background: #fff9ed80; }
+.royal-qualities strong { max-width: 70px; font-size: 12px; line-height: 1.2; }
+.royal-button, .royal-outline, .royal-gold-button { display: inline-flex; align-items: center; justify-content: center; gap: 15px; padding: 10px 22px; transition: transform .2s, box-shadow .2s; }
+.royal-button:hover, .royal-outline:hover, .royal-gold-button:hover { transform: translateY(-2px); }
+.royal-ribbon { position: absolute; left: 0; bottom: -1px; width: 100%; height: clamp(70px, 9vw, 143px); z-index: 1; pointer-events: none; }
+.royal-hero-floral { position: absolute; right: -50px; bottom: -71px; width: clamp(175px, 23vw, 360px); z-index: 3; transform: rotate(-30deg); pointer-events: none; }
+.royal-menu, .royal-events, .royal-trust { position: relative; scroll-margin-top: 110px; }
+.royal-menu { padding: 2px 0 20px; }
+.royal-menu::before, .royal-events::before, .royal-events::after {
+  content: ''; position: absolute; width: clamp(130px, 18vw, 285px); height: clamp(130px, 18vw, 285px); pointer-events: none;
+  background: url('/images/preview-3/ornaments/botanical-gold.svg') center / contain no-repeat; opacity: .66; z-index: 0;
+}
+.royal-menu::before { left: -105px; top: 0; transform: scaleX(-1); }
+.royal-heading { position: relative; text-align: center; margin: 0 0 23px; }
+.royal-heading .royal-kicker::before { content: ''; width: 52px; height: 1px; background: #b18138; }
+.royal-heading h2 { margin: 7px 0 5px; }
+.royal-heading p, .royal-events p, .royal-trust p { font-size: clamp(13px, 1vw, 16px); line-height: 1.45; }
+.royal-menu-grid { position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(12px, 1.5vw, 23px); }
+.royal-menu-card, .royal-event-card, .royal-review {
+  border: 1px solid #e2d0ae; border-radius: 15px; overflow: hidden;
+  background: linear-gradient(150deg, #fffaf1, #f5e9d3);
+  box-shadow: 0 5px 10px -4px #62431536, 0 1px 2px #76572b18, inset 0 1px 0 #fff;
+}
+.royal-menu-card, .royal-event-card { display: flex; flex-direction: column; color: #091c35; text-align: left; padding: 0; transition: transform .25s, box-shadow .25s; }
+.royal-menu-card:hover, .royal-event-card:hover { transform: translateY(-4px); box-shadow: 0 9px 14px -4px #62431542; }
+.royal-card-photo { height: clamp(110px, 11vw, 182px); overflow: hidden; width: 100%; }
+.royal-card-photo img { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.06) contrast(1.03); }
+.royal-card-label { display: flex; align-items: center; justify-content: space-between; gap: 7px; padding: 10px 12px; min-height: 50px; flex: 1; }
+.royal-card-label strong { font-family: var(--royal-serif); font-size: clamp(13px, 1.1vw, 18px); line-height: 1.23; font-weight: 700; }
+.royal-card-arrow { display: grid; place-items: center; flex-shrink: 0; border-radius: 50%; border: 1px solid #d6ad62; background: #fff0cb; color: #805313; width: 26px; height: 26px; }
+.royal-center { display: flex; justify-content: center; margin-top: 17px; }
+.royal-outline { border: 1px solid #a87931; border-radius: 30px; background: #fff8eb90; color: #081c3b; font-weight: 700; font-size: 13px; padding: 7px 22px; }
+.royal-events { padding: 12px 0 24px; }
+.royal-events::before { left: -95px; top: -70px; background-image: url('/images/preview-3/ornaments/botanical-navy.svg'); transform: scaleX(-1); }
+.royal-events::after { right: -110px; top: -70px; transform: rotate(175deg); }
+.royal-events-grid { display: grid; grid-template-columns: .94fr 3.1fr; gap: 22px; position: relative; z-index: 1; align-items: center; }
+.royal-events-copy .royal-kicker::after { display: none; }
+.royal-events-copy h2 { margin: 7px 0 9px; font-size: clamp(25px, 2.4vw, 38px); }
+.royal-event-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(11px, 1.3vw, 20px); }
+.royal-event-card .royal-card-photo { height: clamp(90px, 9vw, 155px); }
+.royal-event-label { display: flex; justify-content: center; align-items: center; gap: 9px; padding: 9px 7px; font-size: clamp(12px, 1.1vw, 16px); flex: 1; }
+.royal-event-label svg { color: #9e6a1e; flex-shrink: 0; }
+.royal-trust { padding: 6px 0 28px; }
+.royal-trust-grid { display: grid; grid-template-columns: .98fr 2.45fr; gap: 27px; }
+.royal-reasons { border-right: 1px solid #c8a66a; padding-right: 22px; }
+.royal-reasons h2, .royal-reviews h2 { font-size: clamp(24px, 2.25vw, 36px); }
+.royal-reasons ul { margin: 15px 0 0; padding: 0; display: grid; gap: 8px; list-style: none; }
+.royal-reasons li { display: flex; align-items: center; gap: 11px; font-size: clamp(12px, 1vw, 15px); font-weight: 700; }
+.royal-reasons li > span { width: 25px; height: 25px; display: grid; place-items: center; flex-shrink: 0; border-radius: 50%; background: linear-gradient(#daa94c, #9a6519); color: white; border: 1px solid #f3d699; box-shadow: 0 2px 3px #67420e22; }
+.royal-reviews-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 13px; }
+.royal-review-controls { display: flex; gap: 8px; }
+.royal-review-controls button { width: 33px; height: 33px; border-radius: 50%; border: 1px solid #ddb876; background: #f9e9bf; display: grid; place-items: center; color: #805313; }
+.royal-review-controls button:last-child { background: #0b2b50; color: white; }
+.royal-review-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.royal-review { padding: 14px; position: relative; }
+.royal-review-person { display: flex; align-items: center; gap: 9px; }
+.royal-review-person > span { flex-shrink: 0; display: grid; place-items: center; width: 35px; height: 35px; border: 1px solid currentColor; border-radius: 50%; }
+.royal-review-person strong { font-size: 12px; line-height: 1.22; }
+.royal-review-mark { display: block; height: 20px; font: 36px/1 var(--royal-serif); color: #b47a22; margin-top: 6px; }
+.royal-review p { font-size: 13px; }
+.royal-review-source { margin-top: 8px; font-size: 10px !important; color: #77664b; }
+.royal-review-source a { text-decoration: underline; }
+.royal-cta { position: relative; isolation: isolate; overflow: hidden; background: linear-gradient(110deg, #0a254a, #174578 52%, #081c3b); color: #fff8ec; padding: clamp(52px, 5.5vw, 92px) 0 clamp(48px, 5vw, 80px); }
+.royal-cta-photo { position: absolute; left: 0; top: 15px; bottom: 15px; width: 33%; z-index: -1; }
+.royal-cta-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.royal-cta-pattern { position: absolute; inset: 0; z-index: -1; background: url('/images/preview-3/patterns/navy-botanical.svg'), linear-gradient(90deg, transparent 18%, #10386570 28%, #123b68 38%, #092343e0); background-size: 220px, auto; }
+.royal-cta-inner { display: grid; grid-template-columns: 1.3fr .9fr; align-items: center; gap: 30px; padding-left: 25%; position: relative; z-index: 2; }
+.royal-cta h2 { font-size: clamp(27px, 2.6vw, 42px); font-style: italic; color: #fff9f0; text-shadow: 0 2px 4px #00142c88; }
+.royal-cta h2 em { color: #f1cb74; }
+.royal-cta p { font-size: 14px; margin-top: 7px; line-height: 1.4; max-width: 430px; }
+.royal-cta-actions { display: flex; flex-direction: column; align-items: center; gap: 10px; border-left: 1px solid #e2b55c; padding-left: 20px; }
+.royal-gold-button { border-radius: 35px; background: linear-gradient(#ffe8a9, #e5b558 75%); color: #081c3b; font-weight: 700; font-size: 13px; box-shadow: inset 0 1px 0 #fff9dd, 0 3px 7px #03162d80; line-height: 1.2; border: 1px solid #eac677; }
+.royal-cta-actions > a:last-child { font-size: 11px; display: flex; align-items: center; gap: 6px; color: #f7de9d; }
+.royal-cta-floral { position: absolute; right: -70px; bottom: 0; width: clamp(190px, 22vw, 340px); pointer-events: none; z-index: 1; }
+.royal-ribbon--top { top: -2px; bottom: auto; height: clamp(35px, 4vw, 65px); transform: rotate(180deg); }
+.royal-ribbon--bottom { height: clamp(35px, 4vw, 65px); }
+.royal-site footer { position: relative; overflow: hidden; color: #081c3b; padding: 25px 0 17px; border-top: 0; }
+.royal-site footer::before, .royal-site footer::after { content: ''; position: absolute; pointer-events: none; bottom: -65px; width: 220px; height: 245px; opacity: .65; background: url('/images/preview-3/ornaments/botanical-mixed.svg') center / contain no-repeat; }
+.royal-site footer::before { left: -85px; transform: scaleX(-1); }
+.royal-site footer::after { right: -85px; }
+.royal-site .footer-grid, .royal-site .footer-bottom { position: relative; z-index: 1; width: min(1400px, 83%); }
+.royal-site .footer-grid h4 { color: #081c3b; }
+.royal-site .footer-grid p, .royal-site .footer-grid > div > a:not(.brand) { color: #23354b; }
+.royal-site .footer-grid svg { color: #a67319; }
+.royal-site .footer-bottom { color: #38475a; border-top-color: #c29c55; margin-top: 18px; }
+.royal-site .footer-bottom a { color: #946017; }
+.royal-site .footer-grid .brand img { width: 115px; height: 79px; }
+.royal-site .ed-inner-hero { background: #faf2e4; color: #081c3b; }
+.royal-site .ed-inner-hero-shade { background: linear-gradient(90deg, #faf2e4 0%, #faf2e4 33%, #faf2e4f5 43%, #faf2e447 70%, transparent); }
+.royal-site .ed-inner-hero h1 em, .royal-site .ed-inner-kicker { color: #a67319; }
+.royal-site .ed-inner-hero p, .royal-site .ed-inner-breadcrumb { color: #20334b; }
+.royal-site .ed-inner-hero::before, .royal-site .ed-inner-content::before { background-image: url('/images/preview-3/ornaments/botanical-mixed.svg'); opacity: .28; }
+.royal-site .ed-inner-cta { background: url('/images/preview-3/patterns/navy-botanical.svg'), linear-gradient(105deg, #081c3b, #103e78, #081c3b); }
+.royal-site .ed-inner-cta .ed-inner-kicker { color: #f1cb74; }
+.royal-site .ed-inner-content .form-card, .royal-site .ed-inner-content .food-card { border-radius: 15px; }
+@media (max-width: 1050px) {
+  .royal-site .nav { width: calc(100% - 48px); gap: 12px; }
+  .royal-site nav { gap: 12px; }
+  .royal-wrap { width: 91%; }
+  .royal-events-grid { grid-template-columns: 1fr 3fr; gap: 16px; }
+  .royal-cta-inner { padding-left: 21%; }
+}
+@media (max-width: 760px) {
+  .royal-site header::before { width: 100px; height: 110px; left: -42px; }
+  .royal-site .nav { height: 69px; width: calc(100% - 32px); }
+  .royal-site header .brand img { max-width: 90px; }
+  .royal-site nav { background: #faf2e4; top: 69px; }
+  .royal-site nav a { color: #081c3b; }
+  .royal-wrap { width: calc(100% - 32px); }
+  .royal-hero-photo { inset: 0 0 auto; height: 250px; border-radius: 0; }
+  .royal-hero-fade { background: linear-gradient(0deg, #faf2e4 0%, #faf2e4 53%, #faf2e410 82%, transparent); }
+  .royal-hero-content { padding: 195px 0 75px; }
+  .royal-hero h1 { font-size: clamp(32px, 9vw, 44px); }
+  .royal-hero h1 > span { flex-wrap: wrap; gap: 8px; }
+  .royal-hero h1 small { font-size: 10px; }
+  .royal-qualities { flex-wrap: wrap; gap: 8px 10px; }
+  .royal-qualities > div { padding-right: 7px; }
+  .royal-qualities > div > span { width: 29px; height: 29px; }
+  .royal-qualities > div > span svg { width: 18px; }
+  .royal-qualities strong { font-size: 11px; }
+  .royal-hero-floral { width: 145px; right: -55px; bottom: -37px; opacity: .85; }
+  .royal-kicker { font-size: 9px; letter-spacing: .15em; }
+  .royal-heading .royal-kicker::before, .royal-kicker::after { width: 24px; }
+  .royal-home h2 { font-size: 27px; }
+  .royal-heading { margin-bottom: 15px; }
+  .royal-menu { padding-bottom: 25px; }
+  .royal-menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .royal-card-photo { height: 128px; }
+  .royal-card-label { padding: 9px; min-height: 48px; }
+  .royal-events-grid, .royal-trust-grid { grid-template-columns: 1fr; }
+  .royal-event-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .royal-event-card .royal-card-photo { height: 115px; }
+  .royal-reasons { border-right: 0; border-bottom: 1px solid #c8a66a; padding: 0 0 20px; }
+  .royal-review-grid { grid-template-columns: 1fr; }
+  .royal-review { min-height: 0; }
+  .royal-menu::before, .royal-events::before, .royal-events::after { opacity: .32; }
+  .royal-cta { padding: 58px 0 48px; }
+  .royal-cta-photo { width: 55%; opacity: .25; }
+  .royal-cta-pattern { background: url('/images/preview-3/patterns/navy-botanical.svg'), linear-gradient(90deg, #10386560, #092343c0); }
+  .royal-cta-inner { padding: 0; grid-template-columns: 1fr; gap: 17px; }
+  .royal-cta-actions { align-items: flex-start; border-left: 0; padding-left: 0; }
+  .royal-cta-floral { opacity: .4; right: -90px; }
+  .royal-site footer::before, .royal-site footer::after { opacity: .23; }
+  .royal-site .footer-grid, .royal-site .footer-bottom { width: calc(100% - 36px); }
+  .royal-site .ed-inner-hero-shade { background: linear-gradient(90deg, #faf2e4fa, #faf2e4ed 50%, #faf2e4b0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .royal-home *, .royal-home *::before, .royal-home *::after { transition: none !important; }
+}

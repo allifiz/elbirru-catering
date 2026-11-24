@@ -22,7 +22,7 @@ import {
   PartyPopper,
 } from 'lucide-react';
 import Link from 'next/link';
-import EditorialHome from './editorial/EditorialHome';
+import RoyalHome from './royal/RoyalHome';
 import InnerPage from './editorial/InnerPage';
 import ContactDetails from './editorial/ContactDetails';
 import {
@@ -665,9 +665,9 @@ export default function Experience({ initialSection = '' }: { initialSection?: s
   const [selected, setSelected] = useState<Item | null>(null);
   const home = !initialSection;
   return (
-    <div className="editorial-site">
+    <div className="editorial-site royal-site">
       <div className="preview-bar">
-        DESIGN PREVIEW 02 <span>•</span> Konsep website Elbirru Catering <span>•</span> Harga
+        DESIGN PREVIEW 03 <span>•</span> Konsep website Elbirru Catering <span>•</span> Harga
         simulasi
       </div>
       <header>
@@ -706,7 +706,7 @@ export default function Experience({ initialSection = '' }: { initialSection?: s
       <main>
         {home ? (
           <>
-            <EditorialHome onSelect={setSelected} />
+            <RoyalHome onSelect={setSelected} />
           </>
         ) : (
           <InnerPage section={initialSection}>

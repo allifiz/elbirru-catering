@@ -3,10 +3,10 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - preview-2
+      - preview-3
     paths:
       - '.github/workflows/format-source.yml'
-      # Keep inner-page formatting scoped to preview-2.
+      # Keep inner-page formatting scoped to preview-3.
 permissions:
   contents: write
 jobs:
@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
-          ref: preview-2
+          ref: preview-3
       - run: npx --yes prettier@3.6.2 --write app components data scripts
       - run: |
           git diff --check
@@ -23,6 +23,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add app components data scripts
           if ! git diff --cached --quiet; then
-            git commit -m "style: format editorial preview"
-            git push origin HEAD:preview-2
+            git commit -m "style: format botanical royal preview"
+            git push origin HEAD:preview-3
           fi
