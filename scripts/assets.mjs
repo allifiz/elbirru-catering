@@ -1,4 +1,7 @@
-import {mkdir,writeFile,access} from 'node:fs/promises';
-const ids={hero:'1555244162-803834f70033',buffet:'1555939594-58d7cb561ad1',rice:'1512058564366-18510be2db19',traditional:'1547592180-85f173990554',dinner:'1511795409834-ef04bbd61622',snack:'1509440159596-0249088772ff',coffee:'1501339847302-ac426a4a7cbb',chef:'1556911220-bff31c812dba',box:'1546069901-ba9599a7e63c',event:'1519167758481-83f550bb49b3',table:'1515003197210-e0cd71810b5f',pastry:'1484723091739-30a097e8f929'};
-await mkdir('public/images',{recursive:true});
-await Promise.all(Object.entries(ids).map(async ([name,id])=>{const path='public/images/'+name+'.jpg';try{await access(path);return}catch{}try{const response=await fetch('https://images.unsplash.com/photo-'+id+'?fit=crop&fm=jpg&w='+(name==='hero'?2000:1000)+'&q=82',{signal:AbortSignal.timeout(15000)});if(!response.ok||!response.headers.get('content-type')?.startsWith('image/'))throw Error('HTTP '+response.status);await writeFile(path,Buffer.from(await response.arrayBuffer()));console.log('Asset saved:',name)}catch(e){console.warn('Stock asset unavailable:',name,e.message)}}));
+import {mkdir,writeFile,access,readFile} from 'node:fs/promises';
+const refs=JSON.parse(await readFile('data/official-assets.json','utf8'));
+refs.logo='https://elbirrucatering.com/wp-content/uploads/2023/08/LOGO-ELBIRRU-300x205.png';
+await mkdir('public/images/official',{recursive:true});
+let success=0;
+await Promise.all(Object.entries(refs).map(async ([name,url])=>{const path='public/images/official/'+name+'.'+url.split('.').pop();try{await access(path);success++;return}catch{}try{const response=await fetch(url,{headers:{'User-Agent':'Mozilla/5.0 Elbirru design preview'},signal:AbortSignal.timeout(15000)});if(!response.ok||!response.headers.get('content-type')?.startsWith('image/'))throw Error('HTTP '+response.status);await writeFile(path,Buffer.from(await response.arrayBuffer()));success++;console.log('Official asset saved:',name)}catch(e){console.warn('Official asset unavailable:',name,e.message)}}));
+console.log('Official assets: '+success+'/'+Object.keys(refs).length);
