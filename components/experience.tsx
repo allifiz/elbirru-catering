@@ -665,7 +665,8 @@ export default function Experience({ initialSection = '' }: { initialSection?: s
   return (
     <div className="editorial-site">
       <div className="preview-bar">
-        DESIGN PREVIEW 02 <span>•</span> Konsep website Elbirru Catering <span>•</span> Harga simulasi
+        DESIGN PREVIEW 02 <span>•</span> Konsep website Elbirru Catering <span>•</span> Harga
+        simulasi
       </div>
       <header>
         <div className="wrap nav">
@@ -690,7 +691,12 @@ export default function Experience({ initialSection = '' }: { initialSection?: s
               </Link>
             ))}
           </nav>
-          <a className="button nav-cta" href="https://wa.me/6281312544313" target="_blank" rel="noreferrer">
+          <a
+            className="button nav-cta"
+            href="https://wa.me/6281312544313"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Phone size={17} /> Pesan via WhatsApp
           </a>
         </div>

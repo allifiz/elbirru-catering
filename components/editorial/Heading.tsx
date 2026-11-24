@@ -10,7 +10,9 @@ export default function Heading({
   return (
     <div className="ed-heading">
       <h2>
-        <span>{title} {accent && <em>{accent}</em>}</span>
+        <span>
+          {title} {accent && <em>{accent}</em>}
+        </span>
       </h2>
       {description && <p>{description}</p>}
     </div>

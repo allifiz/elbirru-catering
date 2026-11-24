@@ -24,22 +24,47 @@ export default function Portfolio() {
   return (
     <section className="ed-portfolio" id="portofolio">
       <div className="ed-container">
-        <Heading title="Portofolio" accent="ELBIRRU Catering" description="Dokumentasi layanan catering Elbirru untuk berbagai momen istimewa." />
+        <Heading
+          title="Portofolio"
+          accent="ELBIRRU Catering"
+          description="Dokumentasi layanan catering Elbirru untuk berbagai momen istimewa."
+        />
         <div className="ed-portfolio-action">
-          <Link href="/galeri">Lihat Portofolio Lainnya <ArrowRight size={15} /></Link>
+          <Link href="/galeri">
+            Lihat Portofolio Lainnya <ArrowRight size={15} />
+          </Link>
         </div>
         <div className="ed-portfolio-grid">
           {pictures.map((photo, index) => (
-            <button key={photo} onClick={() => setActive(photo)} aria-label={'Buka dokumentasi ' + (index + 1)}>
+            <button
+              key={photo}
+              onClick={() => setActive(photo)}
+              aria-label={'Buka dokumentasi ' + (index + 1)}
+            >
               <OfficialPhoto photo={photo} alt={'Dokumentasi pernikahan Elbirru ' + (index + 1)} />
             </button>
           ))}
         </div>
         {active && (
           <div className="modal-backdrop" onClick={() => setActive(null)}>
-            <div className="modal" role="dialog" aria-modal="true" aria-label="Foto portofolio" onClick={(event) => event.stopPropagation()}>
-              <button autoFocus className="modal-close" onClick={() => setActive(null)} aria-label="Tutup"><X /></button>
-              <div className="lightbox"><OfficialPhoto photo={active} alt="Dokumentasi Elbirru" /></div>
+            <div
+              className="modal"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Foto portofolio"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <button
+                autoFocus
+                className="modal-close"
+                onClick={() => setActive(null)}
+                aria-label="Tutup"
+              >
+                <X />
+              </button>
+              <div className="lightbox">
+                <OfficialPhoto photo={active} alt="Dokumentasi Elbirru" />
+              </div>
             </div>
           </div>
         )}
