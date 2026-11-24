@@ -24,14 +24,8 @@ export default function WaveDivider({ flip = false }: { flip?: boolean }) {
           <stop offset="1" stopColor="#f2e8da" />
         </linearGradient>
       </defs>
-      <path
-        d="M0 16 C195 115 405 32 675 25 S1170 104 1440 13 V85 H0Z"
-        fill={`url(#${id}-metal)`}
-      />
-      <path
-        d="M0 26 C195 125 405 39 675 32 S1170 111 1440 23 V85 H0Z"
-        fill={`url(#${id}-paper)`}
-      />
+      <path d="M0 16 C195 115 405 32 675 25 S1170 104 1440 13 V85 H0Z" fill={`url(#${id}-metal)`} />
+      <path d="M0 26 C195 125 405 39 675 32 S1170 111 1440 23 V85 H0Z" fill={`url(#${id}-paper)`} />
       <path
         d="M0 24 C195 123 405 37 675 30 S1170 109 1440 21"
         fill="none"

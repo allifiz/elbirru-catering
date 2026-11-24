@@ -14,7 +14,11 @@ export default function Hero() {
   return (
     <section className="ed-hero">
       <div className="ed-hero-photo">
-        <OfficialPhoto photo="heroBuffet" alt="Dokumentasi dekorasi prasmanan Elbirru Catering" priority />
+        <OfficialPhoto
+          photo="heroBuffet"
+          alt="Dokumentasi dekorasi prasmanan Elbirru Catering"
+          priority
+        />
       </div>
       <div className="ed-hero-shade" />
       <div className="ed-container ed-hero-content">
