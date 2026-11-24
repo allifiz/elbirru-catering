@@ -1,0 +1,526 @@
+/* Final decorative layer for the Wedding Editorial concept.
+   Artwork is local vector artwork; photos remain official Elbirru documentation. */
+.editorial-site {
+  --ed-ink: #092449;
+  --ed-gold-light: #f2d087;
+  --ed-paper: #f8f1e6;
+}
+
+.editorial-home {
+  isolation: isolate;
+  background:
+    url('/images/editorial-fine-paper.svg'),
+    radial-gradient(ellipse at 48% 18%, #fffaf2 0%, transparent 65%),
+    linear-gradient(110deg, #f1e6d8, #faf5ed 53%, #f2e7d8);
+}
+
+.editorial-site header {
+  background: linear-gradient(115deg, #03152c 5%, #112d4d 56%, #10233c);
+  box-shadow: 0 2px 12px #06172d20;
+}
+
+.editorial-site .nav {
+  width: min(1540px, 86.5%);
+  gap: clamp(18px, 3vw, 52px);
+}
+
+.editorial-site .brand img {
+  width: clamp(102px, 10.5vw, 174px);
+  height: clamp(66px, 7vw, 113px);
+  filter: drop-shadow(0 1px 1px #e9d9ab35);
+}
+
+.editorial-site .nav-cta {
+  min-width: 170px;
+  text-align: left;
+  line-height: 1.25;
+}
+
+.ed-container {
+  width: min(1640px, 91.4%);
+}
+
+.ed-hero {
+  min-height: 0;
+  isolation: isolate;
+  background: #03152d;
+}
+
+.ed-hero-photo {
+  inset: 0 0 0 29%;
+}
+
+.ed-hero-photo img {
+  object-position: 54% 61%;
+  filter: saturate(1.07) contrast(1.055) brightness(1.025);
+}
+
+.ed-hero-shade {
+  background:
+    radial-gradient(ellipse at 30% 62%, #16375e40, transparent 54%),
+    linear-gradient(90deg, #03172f 0%, #061d39 24%, #0a2747f7 35%, #0a2747ad 43%, #0a274728 57%, transparent 72%),
+    linear-gradient(0deg, #061a3020, transparent 46%);
+}
+
+.ed-hero::before {
+  background-image: url('/images/editorial-engraving-navy.svg');
+  left: -90px;
+  top: auto;
+  bottom: 26px;
+  width: clamp(260px, 30vw, 480px);
+  height: clamp(250px, 31vw, 490px);
+  transform: scaleX(-1) rotate(-11deg);
+  opacity: .58;
+  z-index: 1;
+  mask-image: linear-gradient(90deg, transparent, #000 45%);
+}
+
+.ed-hero-content {
+  width: min(1540px, 86.5%);
+  padding: clamp(46px, 4.8vw, 82px) 0 clamp(70px, 6.6vw, 115px);
+}
+
+.ed-hero-copy {
+  width: 58%;
+  max-width: 740px;
+}
+
+.ed-hero h1 {
+  font-size: clamp(40px, 3.7vw, 66px);
+  text-shadow: 0 2px 12px #00132855;
+}
+
+.ed-hero h1 em {
+  color: #e5b555;
+}
+
+.ed-location {
+  box-shadow: inset 0 0 8px #e8c07716;
+}
+
+.ed-hero-copy p {
+  max-width: 520px;
+  font-size: clamp(14px, 1.25vw, 19px);
+}
+
+.ed-qualities {
+  gap: clamp(9px, 1vw, 18px);
+  margin: 17px 0 24px;
+}
+
+.ed-qualities > div {
+  font-size: clamp(12px, 1vw, 15px);
+  padding-right: 13px;
+}
+
+.ed-qualities > div > span {
+  width: 40px;
+  height: 40px;
+  border-color: #f1ca78;
+  color: #efc46b;
+  box-shadow: inset 0 0 10px #dfac4620, 0 2px 4px #0003;
+}
+
+.ed-wave {
+  height: clamp(48px, 5vw, 82px);
+}
+
+.ed-button,
+.editorial-site .nav-cta {
+  background: linear-gradient(180deg, #f8dc95 0%, #edc575 45%, #d6a34a 100%);
+  border: 1px solid #f2d48c;
+  box-shadow: inset 0 1px 1px #fff6d8, 0 3px 6px #30200830;
+}
+
+.ed-services,
+.ed-reviews,
+.ed-portfolio {
+  background-image: none;
+  background-color: transparent;
+}
+
+.ed-services {
+  padding: 9px 0 29px;
+}
+
+.ed-heading h2 {
+  font-size: clamp(27px, 2.4vw, 42px);
+  color: var(--ed-ink);
+}
+
+.ed-heading h2 em {
+  color: #a66c12;
+}
+
+.ed-heading p {
+  font-size: clamp(13px, 1.1vw, 16px);
+}
+
+.ed-services::before,
+.ed-portfolio::before,
+.ed-reasons::after {
+  background-image: url('/images/editorial-engraving-gold.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: .39;
+  width: clamp(200px, 22vw, 365px);
+  height: clamp(210px, 23vw, 375px);
+  pointer-events: none;
+}
+
+.ed-services::before {
+  right: -66px;
+  top: -28px;
+  transform: rotate(165deg);
+}
+
+.ed-service-grid {
+  gap: clamp(10px, 1.2vw, 20px);
+}
+
+.ed-service {
+  position: relative;
+  min-height: clamp(79px, 6.15vw, 111px);
+  border-radius: 17px;
+  padding: 3px;
+  grid-template-columns: 52% 1fr;
+  background: linear-gradient(148deg, #fffaf2, #f5ede1 65%, #eee4d6);
+  border: 1px solid #e2d3c0;
+  box-shadow: 0 4px 7px -2px #50340f35, 0 1px 2px #3f2c171a, inset 0 0 0 1px #fffdf580;
+}
+
+.ed-service-photo {
+  height: clamp(70px, 5.55vw, 99px);
+  border-radius: 13px;
+  box-shadow: inset 0 0 0 1px #ffffff66;
+}
+
+.ed-service-photo img {
+  filter: saturate(1.09) contrast(1.05);
+}
+
+.ed-service span {
+  font-size: clamp(12px, 1.15vw, 18px);
+  font-weight: 700;
+  padding-inline: 1px 5px;
+}
+
+.ed-reasons {
+  position: relative;
+  grid-template-columns: 30% 1fr;
+  background:
+    url('/images/editorial-fine-paper.svg'),
+    linear-gradient(105deg, #efe1cb, #f9f0e3 40%, #f5e9d6);
+}
+
+.ed-reasons-photo {
+  border-radius: 0;
+  clip-path: none;
+  position: relative;
+  min-height: clamp(180px, 16vw, 270px);
+}
+
+.ed-reasons-photo::after {
+  content: '';
+  position: absolute;
+  inset: -1px -1px -1px auto;
+  width: 36%;
+  background: #f4e9d8;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 20% 92%, 32% 80%, 42% 66%, 49% 50%, 58% 33%, 73% 15%);
+}
+
+.ed-reasons-photo img {
+  object-position: center;
+  filter: saturate(1.1) contrast(1.05);
+}
+
+.ed-reasons-inner {
+  padding: 22px 5% 27px 10px;
+}
+
+.ed-reasons::after {
+  right: -47px;
+  top: -46px;
+  transform: rotate(177deg);
+}
+
+.ed-reason-grid article {
+  border-left-color: #c4984d;
+}
+
+.ed-reason-icon {
+  color: #b77b16;
+  border-color: #c79536;
+  box-shadow: 0 0 0 3px #fff8eb70;
+  width: 42px;
+  height: 42px;
+}
+
+.ed-reason-grid h3 {
+  font-size: clamp(13px, 1.1vw, 16px);
+}
+
+.ed-reason-grid p {
+  font-size: clamp(11px, .88vw, 14px);
+}
+
+.ed-reviews {
+  padding: 22px 0 17px;
+  background: radial-gradient(ellipse at 50% 12%, #fff9ef90, transparent 75%);
+}
+
+.ed-review-grid {
+  gap: 14px;
+}
+
+.ed-review {
+  padding: 15px 16px;
+  border: 1px solid #e3d6c3;
+  background: linear-gradient(150deg, #fffaf3, #f8f0e5);
+  box-shadow: 0 4px 10px -4px #6e512d36, inset 0 1px 0 #fff;
+  border-radius: 15px;
+}
+
+.ed-review-copy p {
+  font-size: clamp(13px, 1.05vw, 17px);
+}
+
+.ed-review-person strong {
+  font-size: clamp(12px, 1vw, 15px);
+}
+
+.ed-review-person .ed-initials {
+  background: radial-gradient(circle at 32% 25%, #fff, #f0e8d6);
+  box-shadow: 0 1px 3px #50340f20;
+}
+
+.ed-portfolio {
+  padding: 12px 0 24px;
+}
+
+.ed-portfolio .ed-container {
+  width: min(1690px, 95.8%);
+}
+
+.ed-portfolio::before {
+  left: -73px;
+  top: -14px;
+  transform: scaleX(-1) rotate(12deg);
+}
+
+.ed-portfolio-grid {
+  position: relative;
+  gap: 7px;
+}
+
+.ed-portfolio-grid button {
+  height: clamp(155px, 15vw, 265px);
+  border: 1px solid #fffaf5;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px #5e411b20;
+}
+
+.ed-contact {
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    url('/images/editorial-navy-ribbons.svg') center bottom / 100% 95% no-repeat,
+    linear-gradient(110deg, #02162e, #0b2f55 56%, #041a37);
+  padding: clamp(57px, 5.6vw, 92px) 0 34px;
+}
+
+.ed-contact::before,
+.ed-contact::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  top: auto;
+  width: clamp(220px, 24vw, 400px);
+  height: clamp(230px, 25vw, 410px);
+  z-index: 0;
+  pointer-events: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.ed-contact::before {
+  left: -79px;
+  background-image: url('/images/editorial-engraving-navy.svg');
+  transform: scaleX(-1);
+  opacity: .9;
+}
+
+.ed-contact::after {
+  right: -80px;
+  background-image: url('/images/editorial-engraving-gold.svg');
+  opacity: .65;
+  transform: rotate(-10deg);
+}
+
+.ed-contact-inner {
+  width: min(1540px, 86.5%);
+}
+
+.ed-contact h2 {
+  font-size: clamp(22px, 2.15vw, 37px);
+  text-shadow: 0 2px 6px #0004;
+}
+
+.ed-contact p {
+  font-size: clamp(13px, 1.05vw, 17px);
+}
+
+.ed-contact .ed-whatsapp {
+  background: radial-gradient(circle at 30% 20%, #39d56d, #0a9847 75%);
+  box-shadow: 0 3px 6px #00132b88;
+}
+
+.editorial-site footer {
+  background: #071e39;
+  border-top: 1px solid #d4ad5630;
+}
+
+.editorial-site .footer-grid .brand {
+  background: transparent;
+  padding: 0;
+}
+
+.editorial-site .footer-grid .brand img {
+  width: 130px;
+  height: 90px;
+}
+
+@media (max-width: 1100px) {
+  .editorial-site .nav,
+  .ed-hero-content,
+  .ed-contact-inner {
+    width: calc(100% - 64px);
+  }
+
+  .ed-service span {
+    font-size: 12px;
+  }
+
+  .ed-reason-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 760px) {
+  .editorial-site .nav,
+  .ed-hero-content,
+  .ed-contact-inner,
+  .ed-container,
+  .ed-portfolio .ed-container {
+    width: calc(100% - 32px);
+  }
+
+  .editorial-site .brand img {
+    width: 90px;
+    height: 61px;
+  }
+
+  .ed-hero-photo {
+    inset: 0 0 auto;
+    height: 285px;
+  }
+
+  .ed-hero-shade {
+    background: linear-gradient(0deg, #03172f 0%, #03172f 56%, transparent 100%);
+  }
+
+  .ed-hero-content {
+    padding: 215px 0 64px;
+  }
+
+  .ed-hero-copy {
+    width: 100%;
+  }
+
+  .ed-hero h1 {
+    font-size: clamp(33px, 9vw, 44px);
+  }
+
+  .ed-hero::before {
+    width: 240px;
+    height: 250px;
+    opacity: .35;
+  }
+
+  .ed-qualities {
+    gap: 10px;
+    margin: 12px 0 20px;
+  }
+
+  .ed-qualities > div {
+    font-size: 11px;
+    padding: 0;
+  }
+
+  .ed-qualities > div > span {
+    width: 30px;
+    height: 30px;
+  }
+
+  .ed-heading h2 {
+    font-size: 26px;
+  }
+
+  .ed-services::before,
+  .ed-portfolio::before,
+  .ed-reasons::after {
+    width: 170px;
+    height: 170px;
+    opacity: .25;
+  }
+
+  .ed-service {
+    min-height: 80px;
+    border-radius: 12px;
+  }
+
+  .ed-service-photo {
+    height: 71px;
+    border-radius: 9px;
+  }
+
+  .ed-reasons {
+    grid-template-columns: 1fr;
+  }
+
+  .ed-reasons-photo {
+    min-height: 0;
+    height: 190px;
+  }
+
+  .ed-reasons-photo::after {
+    display: none;
+  }
+
+  .ed-reasons-inner {
+    padding: 22px 16px;
+  }
+
+  .ed-reason-grid h3 {
+    font-size: 12px;
+  }
+
+  .ed-reason-grid p {
+    font-size: 11px;
+  }
+
+  .ed-portfolio-grid button,
+  .ed-portfolio-grid button:first-child {
+    height: 145px;
+  }
+
+  .ed-contact {
+    padding: 55px 0 26px;
+  }
+
+  .ed-contact::before,
+  .ed-contact::after {
+    opacity: .34;
+  }
+}

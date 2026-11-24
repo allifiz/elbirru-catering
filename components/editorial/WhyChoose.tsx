@@ -29,7 +29,7 @@ export default function WhyChoose() {
   return (
     <section className="ed-reasons">
       <div className="ed-reasons-photo">
-        <OfficialPhoto photo="buffet" alt="Dokumentasi prasmanan Elbirru" />
+        <OfficialPhoto photo="buffetDetail" alt="Dokumentasi prasmanan Elbirru" />
       </div>
       <div className="ed-reasons-inner">
         <Heading title="Alasan Memilih" accent="ELBIRRU Catering" />

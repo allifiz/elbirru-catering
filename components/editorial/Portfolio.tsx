@@ -7,7 +7,7 @@ import type { Photo } from '../../data/catalog';
 import Heading from './Heading';
 import OfficialPhoto from './OfficialPhoto';
 
-const pictures: Photo[] = ['wedding8', 'wedding5', 'wedding4', 'wedding1', 'wedding2', 'wedding7'];
+const pictures: Photo[] = ['wedding8', 'wedding7', 'dinner', 'rice', 'box', 'wedding4'];
 
 export default function Portfolio() {
   const [active, setActive] = useState<Photo | null>(null);
@@ -41,7 +41,7 @@ export default function Portfolio() {
               onClick={() => setActive(photo)}
               aria-label={'Buka dokumentasi ' + (index + 1)}
             >
-              <OfficialPhoto photo={photo} alt={'Dokumentasi pernikahan Elbirru ' + (index + 1)} />
+              <OfficialPhoto photo={photo} alt={'Dokumentasi layanan Elbirru ' + (index + 1)} />
             </button>
           ))}
         </div>
