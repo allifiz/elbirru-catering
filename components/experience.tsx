@@ -22,6 +22,7 @@ import {
   PartyPopper,
 } from 'lucide-react';
 import Link from 'next/link';
+import EditorialHome from './editorial/EditorialHome';
 import {
   catalog,
   packages,
@@ -34,10 +35,11 @@ import {
 
 const nav = [
   ['Beranda', '/'],
-  ['Menu', '/menu'],
-  ['Paket', '/paket'],
+  ['Layanan', '/menu'],
   ['Portofolio', '/galeri'],
-  ['Tentang', '/tentang'],
+  ['Testimoni', '/#testimoni'],
+  ['Tentang Kami', '/tentang'],
+  ['Kontak', '/kontak'],
 ];
 const categories = ['Semua', 'Acara besar', 'Paket praktis', 'Tradisional', 'Pengalaman'];
 const occasions = [
@@ -661,9 +663,9 @@ export default function Experience({ initialSection = '' }: { initialSection?: s
   const [selected, setSelected] = useState<Item | null>(null);
   const home = !initialSection;
   return (
-    <>
+    <div className="editorial-site">
       <div className="preview-bar">
-        DESIGN PREVIEW <span>•</span> Konsep website Elbirru Catering <span>•</span> Harga simulasi
+        DESIGN PREVIEW 02 <span>•</span> Konsep website Elbirru Catering <span>•</span> Harga simulasi
       </div>
       <header>
         <div className="wrap nav">
@@ -688,73 +690,15 @@ export default function Experience({ initialSection = '' }: { initialSection?: s
               </Link>
             ))}
           </nav>
-          <Link className="button nav-cta" href="/pemesanan">
-            Rencanakan Acara <ArrowUpRight size={17} />
-          </Link>
+          <a className="button nav-cta" href="https://wa.me/6281312544313" target="_blank" rel="noreferrer">
+            <Phone size={17} /> Pesan via WhatsApp
+          </a>
         </div>
       </header>
       <main>
         {home ? (
           <>
-            <section className="hero">
-              <div className="hero-image">
-                <PhotoView photo="hero" alt="Dokumentasi pernikahan Elbirru Catering" priority />
-              </div>
-              <div className="hero-overlay" />
-              <div className="wrap hero-content">
-                <motion.div
-                  initial={false}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7 }}
-                >
-                  <span className="hero-kicker">
-                    <span /> GARUT · JAWA BARAT
-                  </span>
-                  <h1>
-                    Catering untuk acara
-                    <br />
-                    <em>istimewa Anda.</em>
-                  </h1>
-                  <p>
-                    Prasmanan pernikahan, nasi kotak, hingga catering acara perusahaan. Sajian
-                    halal, sehat, dan higienis dari Garut.
-                  </p>
-                  <div className="hero-actions">
-                    <Link href="/menu" className="button gold">
-                      Jelajahi Menu <ArrowUpRight size={20} />
-                    </Link>
-                    <Link href="/pemesanan" className="button ghost">
-                      Rencanakan Acara <ArrowRight size={18} />
-                    </Link>
-                  </div>
-                </motion.div>
-                <div className="hero-foot">
-                  <span>ELBIRRU CATERING · GARUT</span>
-                  <a href="#menu">
-                    LIHAT PILIHAN MENU <ChevronDown size={16} />
-                  </a>
-                </div>
-              </div>
-            </section>
-            <div className="service-strip">
-              <div className="wrap strip-inner">
-                <span>
-                  <Utensils /> 12 pilihan layanan
-                </span>
-                <span>
-                  <MapPin /> Garut & sekitarnya
-                </span>
-                <span>
-                  <CalendarDays /> Berbagai jenis acara
-                </span>
-              </div>
-            </div>
-            <Catalog onSelect={setSelected} />
-            <Gallery />
-            <Testimonials />
-            <Packages />
-            <About />
-            <Planner />
+            <EditorialHome onSelect={setSelected} />
           </>
         ) : (
           <>
@@ -806,6 +750,6 @@ export default function Experience({ initialSection = '' }: { initialSection?: s
         <CalendarDays size={22} />
         <span>Rencanakan acara</span>
       </Link>
-    </>
+    </div>
   );
 }
