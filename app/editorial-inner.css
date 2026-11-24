@@ -6,8 +6,7 @@
   --inner-border: #e5d6c0;
   --inner-serif: 'Playfair Display', Georgia, serif;
   background:
-    url('/images/editorial-fine-paper.svg'),
-    linear-gradient(115deg, #f2e8dc, #fcf8f1 55%, #f3e9dc);
+    url('/images/editorial-fine-paper.svg'), linear-gradient(115deg, #f2e8dc, #fcf8f1 55%, #f3e9dc);
   color: var(--inner-ink);
 }
 
@@ -37,7 +36,14 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(90deg, #061b35 0%, #0c2949 35%, #0c2949e6 45%, #0c294945 67%, #05172b10);
+  background: linear-gradient(
+    90deg,
+    #061b35 0%,
+    #0c2949 35%,
+    #0c2949e6 45%,
+    #0c294945 67%,
+    #05172b10
+  );
 }
 
 .ed-inner-hero::before {
@@ -211,7 +217,9 @@
   background: linear-gradient(145deg, #fffdf7, #f7efe3);
   border: 1px solid var(--inner-border);
   border-radius: 14px;
-  box-shadow: 0 4px 10px -4px #69462230, inset 0 1px 0 #fff;
+  box-shadow:
+    0 4px 10px -4px #69462230,
+    inset 0 1px 0 #fff;
 }
 
 .ed-inner-content .food-card:hover {

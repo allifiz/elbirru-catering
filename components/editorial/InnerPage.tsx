@@ -5,12 +5,16 @@ import type { Photo } from '../../data/catalog';
 import OfficialPhoto from './OfficialPhoto';
 import WaveDivider from './WaveDivider';
 
-const pages: Record<string, { label: string; title: string; accent: string; description: string; photo: Photo }> = {
+const pages: Record<
+  string,
+  { label: string; title: string; accent: string; description: string; photo: Photo }
+> = {
   menu: {
     label: 'Layanan',
     title: 'Pilihan Sajian',
     accent: 'untuk Setiap Acara',
-    description: 'Kenali beragam layanan Elbirru Catering, dari nasi kotak hingga prasmanan untuk hari istimewa.',
+    description:
+      'Kenali beragam layanan Elbirru Catering, dari nasi kotak hingga prasmanan untuk hari istimewa.',
     photo: 'buffetDetail',
   },
   paket: {
@@ -24,14 +28,16 @@ const pages: Record<string, { label: string; title: string; accent: string; desc
     label: 'Portofolio',
     title: 'Cerita dari',
     accent: 'Setiap Perayaan',
-    description: 'Jelajahi dokumentasi resmi layanan dan pernikahan yang ditangani Elbirru Catering.',
+    description:
+      'Jelajahi dokumentasi resmi layanan dan pernikahan yang ditangani Elbirru Catering.',
     photo: 'wedding8',
   },
   tentang: {
     label: 'Tentang Kami',
     title: 'Mengenal Lebih Dekat',
     accent: 'ELBIRRU Catering',
-    description: 'Catering profesional dari Garut untuk pernikahan, keluarga, instansi, dan berbagai acara.',
+    description:
+      'Catering profesional dari Garut untuk pernikahan, keluarga, instansi, dan berbagai acara.',
     photo: 'wedding7',
   },
   pemesanan: {
@@ -63,10 +69,16 @@ export default function InnerPage({ section, children }: { section: string; chil
         <div className="ed-inner-hero-shade" aria-hidden="true" />
         <div className="ed-inner-hero-content">
           <div className="ed-inner-breadcrumb">
-            <Link href="/">Beranda</Link><ChevronRight size={14} /><span>{page.label}</span>
+            <Link href="/">Beranda</Link>
+            <ChevronRight size={14} />
+            <span>{page.label}</span>
           </div>
           <span className="ed-inner-kicker">ELBIRRU CATERING</span>
-          <h1>{page.title}<br /><em>{page.accent}</em></h1>
+          <h1>
+            {page.title}
+            <br />
+            <em>{page.accent}</em>
+          </h1>
           <p>{page.description}</p>
         </div>
         <WaveDivider />
@@ -77,9 +89,16 @@ export default function InnerPage({ section, children }: { section: string; chil
           <div className="wrap">
             <div>
               <span className="ed-inner-kicker">DISKUSIKAN KEBUTUHAN ANDA</span>
-              <h2>Siap merencanakan <em>acara Anda?</em></h2>
+              <h2>
+                Siap merencanakan <em>acara Anda?</em>
+              </h2>
             </div>
-            <a className="ed-button" href="https://wa.me/6281312544313" target="_blank" rel="noreferrer">
+            <a
+              className="ed-button"
+              href="https://wa.me/6281312544313"
+              target="_blank"
+              rel="noreferrer"
+            >
               <MessageCircle size={18} /> Hubungi Elbirru <ArrowRight size={17} />
             </a>
           </div>
