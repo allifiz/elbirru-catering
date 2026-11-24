@@ -23,6 +23,8 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import EditorialHome from './editorial/EditorialHome';
+import InnerPage from './editorial/InnerPage';
+import ContactDetails from './editorial/ContactDetails';
 import {
   catalog,
   packages,
@@ -707,16 +709,8 @@ export default function Experience({ initialSection = '' }: { initialSection?: s
             <EditorialHome onSelect={setSelected} />
           </>
         ) : (
-          <>
-            <div className="page-intro">
-              <div className="wrap">
-                <Link href="/" className="breadcrumb">
-                  Beranda /
-                </Link>
-                <span> {initialSection.charAt(0).toUpperCase() + initialSection.slice(1)}</span>
-              </div>
-            </div>
-            {initialSection === 'menu' && <Catalog full onSelect={setSelected} />}{' '}
+          <InnerPage section={initialSection}>
+            {initialSection === 'menu' && <Catalog full onSelect={setSelected} />}
             {initialSection === 'paket' && <Packages />}
             {initialSection === 'pemesanan' && <Planner />}
             {initialSection === 'galeri' && <Gallery full />}
@@ -726,8 +720,8 @@ export default function Experience({ initialSection = '' }: { initialSection?: s
                 <Testimonials />
               </>
             )}
-            {initialSection === 'kontak' && <Planner />}
-          </>
+            {initialSection === 'kontak' && <ContactDetails />}
+          </InnerPage>
         )}
       </main>
       <Footer />

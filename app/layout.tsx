@@ -3,6 +3,7 @@ import './globals.css';
 import './editorial.css';
 import './editorial-refinement.css';
 import './editorial-artwork.css';
+import './editorial-inner.css';
 export const metadata: Metadata = {
   title: 'Elbirru Catering | Catering Garut',
   description: 'Konsep desain website katering dari SangkaraKarya. Informasi dan harga ilustratif.',

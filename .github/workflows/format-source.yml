@@ -6,7 +6,7 @@ on:
       - preview-2
     paths:
       - '.github/workflows/format-source.yml'
-      # Manual formatting remains scoped to preview-2.
+      # Keep inner-page formatting scoped to preview-2.
 permissions:
   contents: write
 jobs:

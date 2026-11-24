@@ -1,0 +1,590 @@
+/* Inner pages only. Shared homepage and navbar remain unchanged. */
+.ed-inner {
+  --inner-paper: #faf5ed;
+  --inner-ink: #092449;
+  --inner-gold: #ad7927;
+  --inner-border: #e5d6c0;
+  --inner-serif: 'Playfair Display', Georgia, serif;
+  background:
+    url('/images/editorial-fine-paper.svg'),
+    linear-gradient(115deg, #f2e8dc, #fcf8f1 55%, #f3e9dc);
+  color: var(--inner-ink);
+}
+
+.ed-inner-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 300px;
+  background: #061b35;
+  color: #fffaf1;
+}
+
+.ed-inner-hero-photo {
+  position: absolute;
+  inset: 0 0 0 43%;
+  z-index: -2;
+}
+
+.ed-inner-hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ed-inner-hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, #061b35 0%, #0c2949 35%, #0c2949e6 45%, #0c294945 67%, #05172b10);
+}
+
+.ed-inner-hero::before {
+  content: '';
+  position: absolute;
+  inset: auto auto 15px -85px;
+  width: 300px;
+  height: 300px;
+  background: url('/images/editorial-engraving-navy.svg') center / contain no-repeat;
+  transform: scaleX(-1);
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+.ed-inner-hero-content {
+  position: relative;
+  width: min(1540px, 86.5%);
+  margin: auto;
+  padding: 23px 0 82px;
+}
+
+.ed-inner-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  font-size: 12px;
+  color: #e9dbbe;
+}
+
+.ed-inner-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.ed-inner-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #e8c57e;
+}
+
+.ed-inner-kicker::after {
+  content: '';
+  width: 38px;
+  height: 1px;
+  background: currentColor;
+}
+
+.ed-inner-hero h1 {
+  font: 600 clamp(33px, 3.25vw, 54px) / 1.09 var(--inner-serif);
+  letter-spacing: -0.025em;
+  margin-top: 10px;
+  max-width: 650px;
+}
+
+.ed-inner-hero h1 em {
+  color: #edc36c;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.ed-inner-hero p {
+  max-width: 490px;
+  line-height: 1.6;
+  margin-top: 12px;
+  color: #f4eee4;
+  font-size: 14px;
+}
+
+.ed-inner-hero .ed-wave {
+  height: 48px;
+}
+
+.ed-inner-content {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.ed-inner-content::before {
+  content: '';
+  position: absolute;
+  right: -100px;
+  top: -20px;
+  width: 320px;
+  height: 320px;
+  background: url('/images/editorial-engraving-gold.svg') center / contain no-repeat;
+  transform: rotate(160deg);
+  opacity: 0.24;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.ed-inner-content .section {
+  padding: 48px 0 58px;
+  background: transparent;
+  color: var(--inner-ink);
+}
+
+.ed-inner-content .section > .wrap {
+  width: min(1320px, 90%);
+}
+
+.ed-inner-content .section-head {
+  position: relative;
+  max-width: 800px;
+}
+
+.ed-inner-content h2,
+.ed-inner-content .food-info h3,
+.ed-inner-content .package h3,
+.ed-inner-content .form-title h3 {
+  font-family: var(--inner-serif);
+  letter-spacing: -0.025em;
+}
+
+.ed-inner-content h2 {
+  font-size: clamp(30px, 3vw, 44px);
+  font-weight: 600;
+}
+
+.ed-inner-content .eyebrow {
+  color: #96641c;
+  letter-spacing: 0.12em;
+}
+
+.ed-inner-content .section-head h2::after {
+  content: '';
+  display: block;
+  width: 46px;
+  height: 2px;
+  margin-top: 13px;
+  background: linear-gradient(90deg, #b17b20, #ebca83);
+}
+
+.ed-inner-content .section-head p,
+.ed-inner-content .about p,
+.ed-inner-content .planner p {
+  color: #5e5b53;
+}
+
+.ed-inner-content .text-link {
+  color: #8f601a;
+  border-color: #ba8c43;
+}
+
+.ed-inner-content .chips button {
+  border-radius: 22px;
+  border-color: var(--inner-border);
+  background: #fffaf3;
+}
+
+.ed-inner-content .chips button.active,
+.ed-inner-content .chips button:hover {
+  color: #fff8ec;
+  background: #0b2a4d;
+  border-color: #0b2a4d;
+}
+
+.ed-inner-content .search {
+  border: 1px solid var(--inner-border);
+  border-radius: 25px;
+  background: #fffbf5;
+  padding: 9px 14px;
+}
+
+.ed-inner-content .food-card {
+  background: linear-gradient(145deg, #fffdf7, #f7efe3);
+  border: 1px solid var(--inner-border);
+  border-radius: 14px;
+  box-shadow: 0 4px 10px -4px #69462230, inset 0 1px 0 #fff;
+}
+
+.ed-inner-content .food-card:hover {
+  box-shadow: 0 10px 20px -5px #69462240;
+}
+
+.ed-inner-content .food-img {
+  border-radius: 10px;
+  margin: 5px 5px 0;
+  height: clamp(175px, 16vw, 235px);
+}
+
+.ed-inner-content .food-arrow {
+  border-radius: 50%;
+  background: #fff6e3;
+  color: #8f601a;
+  box-shadow: 0 2px 6px #0002;
+}
+
+.ed-inner-content .food-info h3 {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.ed-inner-content .food-info .price {
+  color: #98671e;
+  border-color: var(--inner-border);
+}
+
+.ed-inner-content .package {
+  background: linear-gradient(145deg, #fffdf7, #f5ecde);
+  border: 1px solid var(--inner-border);
+  border-radius: 14px;
+  color: var(--inner-ink);
+  box-shadow: 0 4px 10px -4px #69462230;
+}
+
+.ed-inner-content .package.featured {
+  background:
+    linear-gradient(#092747ed, #071d38f5),
+    url('/images/editorial-engraving-navy.svg') bottom right / 220px no-repeat;
+  color: #fff7e9;
+  border-color: #c49a4f;
+}
+
+.ed-inner-content .package.featured .eyebrow {
+  color: #edc879;
+}
+
+.ed-inner-content .package-price {
+  color: #a16b20;
+}
+
+.ed-inner-content .package.featured .package-price {
+  color: #f2d087;
+}
+
+.ed-inner-content .package .button,
+.ed-inner-content .form-card .button.gold {
+  background: linear-gradient(180deg, #f6d98e, #d9aa50);
+  color: #14233a;
+  border: 1px solid #d4a64c;
+  border-radius: 24px;
+}
+
+.ed-inner-content .gallery-grid {
+  gap: 14px;
+}
+
+.ed-inner-content .gallery-item {
+  border: 4px solid #fff9ee;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px -3px #49301233;
+  background: #e7ddce;
+}
+
+.ed-inner-content .gallery-item img {
+  object-fit: contain;
+  background: #e7ddce;
+}
+
+.ed-inner-content .about-photo {
+  padding: 6px;
+  background: #fffaf1;
+  border: 1px solid #d3b174;
+  border-radius: 14px;
+  box-shadow: 0 7px 18px -5px #50351140;
+}
+
+.ed-inner-content .about-photo img {
+  border-radius: 8px;
+}
+
+.ed-inner-content .photo-note {
+  background: #0a294c;
+  color: #f2d087;
+  border-top: 1px solid #c99c49;
+}
+
+.ed-inner-content .occasion-list svg {
+  color: #a16b20;
+}
+
+.ed-inner-content .testimonials {
+  background: linear-gradient(100deg, #efe3d0a0, #fff8ed9c, #efe3d080);
+  border-top: 1px solid #e3d3bb;
+}
+
+.ed-inner-content .testimonial {
+  background: linear-gradient(145deg, #fffaf3, #f7eee4);
+  border: 1px solid #e3d6c3;
+  border-top: 2px solid #c99c49;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px -4px #6e512d36;
+}
+
+.ed-inner-content .review-avatar {
+  background: #f1e6d2;
+  color: #0b2a4d;
+  border: 1px solid #cfb47e;
+}
+
+.ed-inner-content .planner-grid {
+  align-items: start;
+}
+
+.ed-inner-content .planner-grid > div:first-child {
+  padding-top: 24px;
+}
+
+.ed-inner-content .planner h2 {
+  color: #092449;
+}
+
+.ed-inner-content .planner-benefits svg {
+  color: #a16b20;
+}
+
+.ed-inner-content .form-card {
+  background: #fffdf8;
+  border: 1px solid #e3d2b6;
+  border-top: 3px solid #c99c49;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px -10px #593b1930;
+}
+
+.ed-inner-content .form-grid input,
+.ed-inner-content .form-grid select,
+.ed-inner-content .form-grid textarea {
+  background: #fbf7ef;
+  border-color: #e4d8c5;
+  border-radius: 6px;
+}
+
+.ed-inner-content .estimate {
+  border: 1px solid #eadcc3;
+  border-radius: 8px;
+  background: #f5ebd9;
+}
+
+.ed-inner-cta {
+  border-top: 1px solid #c99c49;
+  background:
+    url('/images/editorial-engraving-navy.svg') left -45px bottom -95px / 240px no-repeat,
+    linear-gradient(105deg, #071d38, #10365d, #071d38);
+  color: #fff7e9;
+  padding: 27px 0;
+}
+
+.ed-inner-cta .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: min(1320px, 86.5%);
+}
+
+.ed-inner-cta h2 {
+  font: 600 clamp(22px, 2.1vw, 32px) / 1.3 var(--inner-serif);
+  margin-top: 7px;
+}
+
+.ed-inner-cta h2 em {
+  color: #edc36c;
+  font-style: italic;
+}
+
+.ed-contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(25px, 5vw, 75px);
+  align-items: start;
+}
+
+.ed-contact-info h2 {
+  margin: 10px 0;
+}
+
+.ed-contact-info > p {
+  color: #5e5b53;
+}
+
+.ed-contact-links {
+  margin-top: 24px;
+  display: grid;
+  gap: 10px;
+}
+
+.ed-contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border-bottom: 1px solid #e1d0b4;
+  padding: 9px 0 14px;
+  min-width: 0;
+}
+
+.ed-contact-icon {
+  color: #9a6922;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border: 1px solid #cfae71;
+  background: #fffaf1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.ed-contact-links small,
+.ed-contact-links strong {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.ed-contact-links small {
+  color: #856b44;
+}
+
+.ed-contact-links strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ed-contact-arrow {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.ed-contact-panel {
+  border-radius: 16px;
+  background: linear-gradient(140deg, #0d2d50, #071d38);
+  border: 1px solid #c99c49;
+  color: #fffaf1;
+  padding: clamp(24px, 4vw, 45px);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.ed-contact-panel::before {
+  content: '';
+  position: absolute;
+  inset: auto -60px -90px auto;
+  width: 280px;
+  height: 280px;
+  background: url('/images/editorial-engraving-gold.svg') center / contain no-repeat;
+  opacity: 0.17;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.ed-contact-panel > svg {
+  color: #edc36c;
+}
+
+.ed-contact-panel h2 {
+  font-size: 32px;
+  margin: 14px 0;
+}
+
+.ed-contact-panel p {
+  color: #eee2d1;
+  margin-bottom: 20px;
+}
+
+.ed-contact-planner {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #f0d293;
+}
+
+.ed-contact-panel .ed-contact-note {
+  font-size: 11px;
+  opacity: 0.75;
+  margin: 22px 0 0;
+}
+
+@media (max-width: 760px) {
+  .ed-inner-hero {
+    min-height: 0;
+  }
+
+  .ed-inner-hero-photo {
+    inset: 0 0 0 15%;
+  }
+
+  .ed-inner-hero-shade {
+    background: linear-gradient(90deg, #061b35fa, #0b2948eb 45%, #0b2948a0);
+  }
+
+  .ed-inner-hero-content {
+    width: calc(100% - 36px);
+    padding: 20px 0 55px;
+  }
+
+  .ed-inner-breadcrumb {
+    margin-bottom: 15px;
+  }
+
+  .ed-inner-hero h1 {
+    font-size: 33px;
+  }
+
+  .ed-inner-hero .ed-wave {
+    height: 30px;
+  }
+
+  .ed-inner-hero::before,
+  .ed-inner-content::before {
+    width: 190px;
+    height: 190px;
+    opacity: 0.18;
+  }
+
+  .ed-inner-content .section {
+    padding: 32px 0 40px;
+  }
+
+  .ed-inner-content .section > .wrap {
+    width: calc(100% - 32px);
+  }
+
+  .ed-inner-content .food-img {
+    height: 135px;
+  }
+
+  .ed-inner-content .food-info h3 {
+    font-size: 20px;
+  }
+
+  .ed-inner-content .planner-grid > div:first-child {
+    padding-top: 0;
+  }
+
+  .ed-inner-content .gallery-grid {
+    gap: 8px;
+  }
+
+  .ed-inner-content .gallery-item {
+    border-width: 3px;
+  }
+
+  .ed-inner-cta .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(100% - 36px);
+  }
+
+  .ed-contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
