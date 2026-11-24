@@ -924,7 +924,6 @@
   }
 }
 
-
 /* Continuous paper surface and a real, open-edged metallic ribbon. */
 .royal-hero {
   --royal-wave-height: clamp(110px, 13vw, 212px);
@@ -937,7 +936,9 @@
   isolation: isolate;
   z-index: -1;
   mask-image: linear-gradient(#fff, #fff), url('/images/preview-3/ribbons/hero-edge.svg');
-  mask-size: 100% calc(100% - var(--royal-wave-height) + 2px), 100% var(--royal-wave-height);
+  mask-size:
+    100% calc(100% - var(--royal-wave-height) + 2px),
+    100% var(--royal-wave-height);
   mask-position: top, bottom;
   mask-repeat: no-repeat;
 }
@@ -1020,7 +1021,14 @@
   }
 
   .royal-hero-scene .royal-hero-fade {
-    background: linear-gradient(0deg, transparent 0%, #faf2e4 43%, #faf2e4 53%, #faf2e420 82%, transparent);
+    background: linear-gradient(
+      0deg,
+      transparent 0%,
+      #faf2e4 43%,
+      #faf2e4 53%,
+      #faf2e420 82%,
+      transparent
+    );
   }
 
   .royal-hero-content {
