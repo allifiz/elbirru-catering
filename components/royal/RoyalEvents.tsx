@@ -16,14 +16,26 @@ export default function RoyalEvents() {
       <div className="royal-wrap royal-events-grid">
         <div className="royal-events-copy">
           <span className="royal-kicker">LAYANAN KAMI</span>
-          <h2>Catering untuk<br /><em>Berbagai Acara</em></h2>
-          <p>Dari acara pernikahan hingga kegiatan instansi, kami siap menyediakan catering sesuai kebutuhan Anda.</p>
+          <h2>
+            Catering untuk
+            <br />
+            <em>Berbagai Acara</em>
+          </h2>
+          <p>
+            Dari acara pernikahan hingga kegiatan instansi, kami siap menyediakan catering sesuai
+            kebutuhan Anda.
+          </p>
         </div>
         <div className="royal-event-cards">
           {events.map(({ name, photo, icon: Icon, href }) => (
             <Link key={name} href={href} className="royal-event-card">
-              <div className="royal-card-photo"><OfficialPhoto photo={photo} alt={name} /></div>
-              <span className="royal-event-label"><Icon size={26} /><strong>{name}</strong></span>
+              <div className="royal-card-photo">
+                <OfficialPhoto photo={photo} alt={name} />
+              </div>
+              <span className="royal-event-label">
+                <Icon size={26} />
+                <strong>{name}</strong>
+              </span>
             </Link>
           ))}
         </div>

@@ -36,10 +36,20 @@ export default function RoyalRibbon({ variant = 'hero' }: { variant?: 'hero' | '
           <image href="/images/preview-3/patterns/navy-botanical.svg" width="160" height="160" />
         </pattern>
         <pattern id={id + '-metal'} width="320" height="96" patternUnits="userSpaceOnUse">
-          <image href="/images/preview-3/textures/metallic-gold.svg" width="320" height="96" opacity=".25" />
+          <image
+            href="/images/preview-3/textures/metallic-gold.svg"
+            width="320"
+            height="96"
+            opacity=".25"
+          />
         </pattern>
       </defs>
-      <path d={path} fill={`url(#${id}-blue)`} stroke={`url(#${id}-gold)`} strokeWidth={hero ? 18 : 12} />
+      <path
+        d={path}
+        fill={`url(#${id}-blue)`}
+        stroke={`url(#${id}-gold)`}
+        strokeWidth={hero ? 18 : 12}
+      />
       <path d={path} fill={`url(#${id}-pattern)`} />
       <path d={path} fill="none" stroke={`url(#${id}-metal)`} strokeWidth={hero ? 15 : 9} />
       <path d={paper} fill="#faf2e4" stroke={`url(#${id}-gold)`} strokeWidth="3" />

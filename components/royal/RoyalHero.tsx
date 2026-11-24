@@ -1,5 +1,12 @@
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, ConciergeBell, HeartPulse, MapPin, ShieldCheck } from 'lucide-react';
+import {
+  ArrowRight,
+  CheckCircle2,
+  ConciergeBell,
+  HeartPulse,
+  MapPin,
+  ShieldCheck,
+} from 'lucide-react';
 import OfficialPhoto from '../editorial/OfficialPhoto';
 import RoyalRibbon from './RoyalRibbon';
 
@@ -21,18 +28,35 @@ export default function RoyalHero() {
         <span className="royal-kicker">ELBIRRU CATERING</span>
         <h1>
           Catering Terpercaya
-          <span><em>di Garut</em><small><MapPin size={16} /> Garut, Jawa Barat</small></span>
+          <span>
+            <em>di Garut</em>
+            <small>
+              <MapPin size={16} /> Garut, Jawa Barat
+            </small>
+          </span>
         </h1>
         <p>Solusi lengkap kebutuhan catering untuk berbagai acara Anda di Garut dan sekitarnya.</p>
         <div className="royal-qualities">
           {qualities.map(({ name, icon: Icon }) => (
-            <div key={name}><span><Icon size={22} /></span><strong>{name}</strong></div>
+            <div key={name}>
+              <span>
+                <Icon size={22} />
+              </span>
+              <strong>{name}</strong>
+            </div>
           ))}
         </div>
-        <Link href="#menu" className="royal-button">Lihat Layanan Kami <ArrowRight size={17} /></Link>
+        <Link href="#menu" className="royal-button">
+          Lihat Layanan Kami <ArrowRight size={17} />
+        </Link>
       </div>
       <RoyalRibbon />
-      <img className="royal-hero-floral" src="/images/preview-3/ornaments/botanical-mixed.svg" alt="" aria-hidden="true" />
+      <img
+        className="royal-hero-floral"
+        src="/images/preview-3/ornaments/botanical-mixed.svg"
+        alt=""
+        aria-hidden="true"
+      />
     </section>
   );
 }
