@@ -1,2 +1,4 @@
 import Experience from '../components/experience';
-export default function Page(){return <Experience/>}
+export default function Page() {
+  return <Experience />;
+}
