@@ -20,10 +20,12 @@ const qualities = [
 export default function RoyalHero() {
   return (
     <section className="royal-hero">
-      <div className="royal-hero-photo">
-        <OfficialPhoto photo="heroBuffet" alt="Dokumentasi prasmanan Elbirru Catering" priority />
+      <div className="royal-hero-scene">
+        <div className="royal-hero-photo">
+          <OfficialPhoto photo="heroBuffet" alt="Dokumentasi prasmanan Elbirru Catering" priority />
+        </div>
+        <div className="royal-hero-fade" />
       </div>
-      <div className="royal-hero-fade" />
       <div className="royal-wrap royal-hero-content">
         <span className="royal-kicker">ELBIRRU CATERING</span>
         <h1>
@@ -53,7 +55,7 @@ export default function RoyalHero() {
       <RoyalRibbon />
       <img
         className="royal-hero-floral"
-        src="/images/preview-3/ornaments/botanical-mixed.svg"
+        src="/images/preview-3/ornaments/botanical-hero-engraving.svg"
         alt=""
         aria-hidden="true"
       />

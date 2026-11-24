@@ -923,3 +923,113 @@
     transition: none !important;
   }
 }
+
+
+/* Continuous paper surface and a real, open-edged metallic ribbon. */
+.royal-hero {
+  --royal-wave-height: clamp(110px, 13vw, 212px);
+  overflow: visible;
+}
+
+.royal-hero-scene {
+  position: absolute;
+  inset: 0;
+  isolation: isolate;
+  z-index: -1;
+  mask-image: linear-gradient(#fff, #fff), url('/images/preview-3/ribbons/hero-edge.svg');
+  mask-size: 100% calc(100% - var(--royal-wave-height) + 2px), 100% var(--royal-wave-height);
+  mask-position: top, bottom;
+  mask-repeat: no-repeat;
+}
+
+.royal-hero-scene .royal-hero-photo {
+  inset: 0 0 0 32%;
+}
+
+.royal-hero-scene .royal-hero-fade {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 29%,
+    #faf2e4 32%,
+    #faf2e4ed 36%,
+    #faf2e47a 46%,
+    #faf2e400 62%
+  );
+}
+
+.royal-ribbon--hero {
+  height: var(--royal-wave-height);
+  bottom: 0;
+  overflow: visible;
+}
+
+.royal-hero-content {
+  padding-bottom: clamp(105px, 10.2vw, 165px);
+}
+
+.royal-hero-floral {
+  width: clamp(175px, 23vw, 345px);
+  right: -68px;
+  bottom: -56px;
+  transform: rotate(-18deg);
+  filter: drop-shadow(0 2px 2px #74501820);
+}
+
+.royal-menu {
+  padding-top: 0;
+}
+
+.royal-menu .royal-wrap,
+.royal-events .royal-wrap {
+  position: relative;
+  z-index: 4;
+}
+
+.royal-site header::before {
+  background-image: url('/images/preview-3/ornaments/botanical-corner.svg');
+}
+
+.royal-site footer::before,
+.royal-site footer::after {
+  background-image: url('/images/preview-3/ornaments/botanical-corner.svg');
+}
+
+.royal-menu::before,
+.royal-events::after {
+  background-image: url('/images/preview-3/ornaments/botanical-gold-engraving.svg');
+}
+
+.royal-events::before {
+  background-image: url('/images/preview-3/ornaments/botanical-corner.svg');
+}
+
+.royal-ribbon--top,
+.royal-ribbon--bottom {
+  overflow: visible;
+}
+
+@media (max-width: 760px) {
+  .royal-hero {
+    --royal-wave-height: 79px;
+  }
+
+  .royal-hero-scene .royal-hero-photo {
+    inset: 0 0 auto;
+    height: 250px;
+  }
+
+  .royal-hero-scene .royal-hero-fade {
+    background: linear-gradient(0deg, transparent 0%, #faf2e4 43%, #faf2e4 53%, #faf2e420 82%, transparent);
+  }
+
+  .royal-hero-content {
+    padding-bottom: 83px;
+  }
+
+  .royal-hero-floral {
+    width: 145px;
+    right: -48px;
+    bottom: -24px;
+  }
+}

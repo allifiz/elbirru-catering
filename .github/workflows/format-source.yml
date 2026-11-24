@@ -6,7 +6,7 @@ on:
       - preview-3
     paths:
       - '.github/workflows/format-source.yml'
-      # Keep inner-page formatting scoped to preview-3.
+      # Format ribbon and engraving refinement on preview-3 only.
 permissions:
   contents: write
 jobs:
