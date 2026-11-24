@@ -24,9 +24,22 @@
   gap: clamp(18px, 3vw, 52px);
 }
 
-.editorial-site .brand img {
-  width: clamp(102px, 10.5vw, 174px);
-  height: clamp(66px, 7vw, 113px);
+/* Keep the logo inside the sticky header at every viewport width. */
+.editorial-site header .brand {
+  display: flex;
+  align-items: center;
+  height: calc(100% - 16px);
+  min-height: 0;
+  flex-shrink: 0;
+}
+
+.editorial-site header .brand img {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: 174px;
+  max-height: 100%;
+  object-fit: contain;
   filter: drop-shadow(0 1px 1px #e9d9ab35);
 }
 
@@ -442,9 +455,12 @@
     width: calc(100% - 32px);
   }
 
-  .editorial-site .brand img {
-    width: 90px;
-    height: 61px;
+  .editorial-site header .brand {
+    height: calc(100% - 12px);
+  }
+
+  .editorial-site header .brand img {
+    max-width: 90px;
   }
 
   .ed-hero-photo {
