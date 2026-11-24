@@ -1,37 +1,27 @@
-import { Award, Utensils, Leaf, ShieldCheck, Clock, Headphones } from 'lucide-react';
+import { Award, Utensils, Leaf, ShieldCheck } from 'lucide-react';
 import Heading from './Heading';
 import OfficialPhoto from './OfficialPhoto';
 
 const reasons = [
   {
-    title: 'Harga Bersaing',
-    description: 'Kualitas hidangan dan layanan tetap diutamakan.',
+    title: 'Berpengalaman dan Terpercaya',
+    description: 'Melayani berbagai acara, dari keluarga hingga instansi.',
     icon: Award,
   },
   {
-    title: 'Masakan Enak & Sehat',
-    description: 'Bahan alami pilihan dan pengolahan yang higienis.',
-    icon: Leaf,
-  },
-  {
-    title: 'Pelayanan Profesional',
-    description: 'Tim siap membantu kebutuhan catering Anda.',
-    icon: Headphones,
-  },
-  {
-    title: 'Pilihan Lengkap',
-    description: 'Menu untuk pernikahan, acara dan kebutuhan harian.',
+    title: 'Menu Variatif dan Lezat',
+    description: 'Pilihan hidangan untuk pernikahan, acara dan kebutuhan harian.',
     icon: Utensils,
   },
   {
-    title: 'Tim Berpengalaman',
-    description: 'Pengolahan makanan oleh tim kuliner berpengalaman.',
-    icon: ShieldCheck,
+    title: 'Bahan Pilihan dan Sehat',
+    description: 'Mengutamakan bahan alami dan kualitas hidangan.',
+    icon: Leaf,
   },
   {
-    title: 'Pengiriman Tepat Waktu',
-    description: 'Pengiriman disesuaikan dengan jadwal acara.',
-    icon: Clock,
+    title: 'Proses Masak Higienis',
+    description: 'Pengolahan makanan dilakukan dengan memperhatikan kebersihan.',
+    icon: ShieldCheck,
   },
 ];
 

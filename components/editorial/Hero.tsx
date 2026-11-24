@@ -21,13 +21,14 @@ export default function Hero() {
         <div className="ed-hero-copy">
           <span className="ed-kicker">ELBIRRU CATERING</span>
           <h1>
-            Catering Terpercaya
-            <br />
-            <em>di Garut</em>
+            <span className="ed-hero-title">Catering Terpercaya</span>
+            <span className="ed-hero-title-line">
+              <em>di Garut</em>
+              <span className="ed-location">
+                <MapPin size={15} /> Garut, Jawa Barat
+              </span>
+            </span>
           </h1>
-          <span className="ed-location">
-            <MapPin size={16} /> Garut, Jawa Barat
-          </span>
           <p>
             Solusi lengkap kebutuhan catering untuk berbagai acara Anda di Garut dan sekitarnya.
           </p>

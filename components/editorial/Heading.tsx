@@ -8,7 +8,7 @@ export default function Heading({
   description?: string;
 }) {
   return (
-    <div className="ed-heading">
+    <div className={'ed-heading' + (title === 'Layanan Utama' ? ' ed-heading-stacked' : '')}>
       <h2>
         <span>
           {title} {accent && <em>{accent}</em>}
